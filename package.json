@@ -12,6 +12,9 @@
         }
     },
     "scripts": {
+        "start": "lerna run start",
+        "start:dev": "lerna run start:dev",
+        "start:prod": "lerna run start:prod",
         "build": "lerna run build",
         "test": "lerna run test",
         "lint": "eslint \"{src,apps,libs,test,packages}/**/*.ts\" --fix",
