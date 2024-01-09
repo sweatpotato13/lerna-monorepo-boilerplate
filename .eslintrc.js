@@ -3,36 +3,37 @@ module.exports = {
     parserOptions: {
         ecmaVersion: 2018,
         project: "tsconfig.json",
-        sourceType: "module",
+        sourceType: "module"
     },
-    plugins: ["@typescript-eslint/eslint-plugin", "security"],
+    plugins: ["@typescript-eslint/eslint-plugin", "security", "simple-import-sort"],
     extends: [
-        "plugin:security/recommended",
+        "plugin:security/recommended-legacy",
         "plugin:@typescript-eslint/eslint-recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:prettier/recommended",
+        "prettier"
     ],
     globals: {
         Atomics: "readonly",
-        SharedArrayBuffer: "readonly",
+        SharedArrayBuffer: "readonly"
     },
     root: true,
     env: {
         node: true,
-        jest: true,
+        jest: true
     },
-    ignorePatterns: [".eslintrc.js"],
     rules: {
         "@typescript-eslint/interface-name-prefix": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-this-alias": "off",
+        "simple-import-sort/imports": "error",
+        "simple-import-sort/exports": "error",
+        "semi": "error"
     },
     settings: {
         "import/resolver": {
-            node: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
-        },
-    },
+            node: { extensions: [".js", ".jsx", ".ts", ".tsx"] }
+        }
+    }
 };

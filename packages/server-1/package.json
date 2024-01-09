@@ -1,0 +1,82 @@
+{
+    "name": "server-1",
+    "version": "0.0.1",
+    "description": "",
+    "author": "Cute_Wisp",
+    "private": true,
+    "license": "UNLICENSED",
+    "lint-staged": {
+        "*.{ts,tsx,js,jsx}": [
+            "prettier",
+            "yarn run lint --fix"
+        ],
+        "*.{md,json}": [
+            "prettier --write"
+        ]
+    },
+    "bugs": {
+        "url": "https://github.com/emperorhan/nestjs-monorepo-template/issues"
+    },
+    "scripts": {
+        "prebuild": "rimraf dist",
+        "build": "nest build",
+        "prettier": "prettier --write \"src/**/*.ts\"",
+        "prestart": "yarn run types",
+        "start": "nest start",
+        "start:dev": "nest start --watch",
+        "start:debug": "nest start --debug --watch",
+        "start:prod": "node -r ./tsconfig-paths-bootstrap.js dist/main",
+        "lint": "eslint \"src/**/*.ts\" --fix",
+        "test": "jest --passWithNoTests",
+        "test:watch": "jest --watch",
+        "test:cov": "jest --coverage",
+        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+        "test:e2e": "jest --config ./test/jest-e2e.json",
+        "sdk": "nestia sdk 'src/**/*.controller.ts' --out 'src/api'",
+        "swagger": "nestia swagger 'src/**/*.controller.ts' --out './public/swagger.json'",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@babel/core": "^7.23.7",
+        "@elastic/elasticsearch": "^8.11.0",
+        "@nestia/sdk": "^2.4.3",
+        "@nestjs/common": "^10.3.0",
+        "@nestjs/config": "^3.1.1",
+        "@nestjs/core": "^10.3.0",
+        "@nestjs/cqrs": "^10.2.6",
+        "@nestjs/elasticsearch": "^10.0.1",
+        "@nestjs/microservices": "^10.3.0",
+        "@nestjs/passport": "^10.0.3",
+        "@nestjs/platform-express": "^10.3.0",
+        "@nestjs/swagger": "^7.1.17",
+        "@nestjs/typeorm": "10.0.1",
+        "amqp-connection-manager": "^4.1.14",
+        "amqplib": "^0.10.3",
+        "body-parser": "^1.20.2",
+        "bs58": "^5.0.0",
+        "class-transformer": "^0.5.1",
+        "class-validator": "^0.14.0",
+        "cls-rtracer": "^2.6.3",
+        "cross-fetch": "^4.0.0",
+        "dotenv": "^16.3.1",
+        "express-rate-limit": "^7.1.5",
+        "helmet": "^7.1.0",
+        "ioredis": "^5.3.2",
+        "jsonwebtoken": "^9.0.2",
+        "moment": "^2.30.1",
+        "morgan": "^1.10.0",
+        "nest-winston": "^1.9.4",
+        "object-assign": "^4.1.1",
+        "passport": "^0.7.0",
+        "passport-google-oauth20": "^2.0.0",
+        "pg": "^8.11.3",
+        "reflect-metadata": "^0.2.1",
+        "rxjs": "^8.0.0-alpha.7",
+        "tsconfig-paths": "^4.2.0",
+        "typedi": "^0.10.0",
+        "typeorm": "^0.3.17",
+        "typeorm-transactional": "^0.5.0",
+        "winston": "^3.11.0",
+        "winston-mongodb": "^5.1.1"
+    }
+}

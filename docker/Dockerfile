@@ -1,4 +1,4 @@
-FROM node:14.15.0-alpine3.12 as base
+FROM node:20-alpine as base
 LABEL maintainer "Cute_Wisp <sweatpotato13@gmail.com>"
 COPY ./package.json ./
 COPY ./lerna.json ./
