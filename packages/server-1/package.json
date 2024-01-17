@@ -15,7 +15,7 @@
         ]
     },
     "bugs": {
-        "url": "https://github.com/emperorhan/nestjs-monorepo-template/issues"
+        "url": "https://github.com/sweatpotato13/nestjs-monorepo-boilerplate/issues"
     },
     "scripts": {
         "prebuild": "rimraf dist",
