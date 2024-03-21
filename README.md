@@ -1,10 +1,10 @@
-# Nest.JS MonoRepo Template
+# Lerna MonoRepo Template
 
 ![Untitled](https://i.imgur.com/0LyF0AW.png)
 
 ## About
 
-This template is a simple starter template for a Nest.JS project with monorepo using `lerna`
+This template is a simple starter template for a Nest.js and Next.js project with monorepo using `lerna`
 
 ### Add more packages
 ```sh
