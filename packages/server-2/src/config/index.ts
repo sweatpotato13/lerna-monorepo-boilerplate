@@ -30,7 +30,7 @@ export const config = {
     appDescription: process.env.APP_DESCRIPTION || "boilerplate",
     // Server
     host: process.env.HOST || "0.0.0.0",
-    port: parseInt(process.env.PORT) || 8000,
+    port: parseInt(process.env.PORT) || 8001,
     rateLimitMax: parseInt(process.env.RATE_LIMIT_MAX) || 10000,
     appSecret: process.env.APP_SECRET || "secret"
 };

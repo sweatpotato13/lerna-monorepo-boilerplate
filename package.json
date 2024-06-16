@@ -7,6 +7,7 @@
         ]
     },
     "scripts": {
+        "swagger": "lerna run swagger",
         "start": "lerna run start",
         "start:dev": "lerna run start:dev",
         "start:server:dev": "lerna run --scope server-1 --scope server-2 start:dev",
